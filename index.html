@@ -16,10 +16,28 @@
         <H4>Tu es plutot horde ou alliance ?</H4>
         <button id="btn-1">Horde</button>
         <button id="btn-2">Alliance</button>
-        <h5>Aucune bonne réponse, tout le monde peu jouer avec tout le monde maintenant</h5>
+        <h5 id="Horde">La horde est plus pve mais tu peu pour certaines classes</h5>
+        <h5 id ="Alliance">L'alliance aura souvent les meilleurs raciaux en PvP </h5>
     </div>
    
     <div class="mousemove"></div>
+
+    <form action="" class="box">
+        <input type="text" placeholder="Entrez votre nom">
+
+        <select>
+            <option value="">Séléctionner votre allégence</option>
+            <option value="Horde">Horde</option>
+            <option value="Alliance">Alliance</option>
+        </select>
+
+        <input type="checkbox" name="" id="cgv">
+        <label for="cgv">Etes vous sur ?</label>
+
+        <input type="submit" value="Valider">
+        <div></div>
+    </form>
+
 
     <div class="keypress box">
         <h6>J'appuie sur la touche : <span id="key"></span></h6>
@@ -27,25 +45,30 @@
 
     <nav>
         <ul>
-            <li>Classes</li>
-<<<<<<< HEAD
-            <li>races</li>
-            <li>roles</li>
-=======
+            <li>Classes </li>
             <li>Races</li>
             <li>Roles</li>
-<li> thalassa </li>
-
->>>>>>> 97472729cb271bfa02c3e9131add002d82ab1852
         </ul>
     </nav>
-<H2>Chapitre 1</H2>
+
+<H2 class="h2H"> Horde</H2>
     <p>Ici je vais raconter des trucs sur le CH1</p>
+    <ol>
+        <li>Orc</li>
+        <li>Mort-vivant</li>
+        <li>Tauren</li>
+    </ol>
 
-    <H2>Chapitres 2</H2>
-    <P>des trucs en rapport à CH2
 
-    </P>
+<H2 class="h2A"> Alliance</H2>
+    <P>des trucs en rapport à CH2</P>
+    <ol>
+        <li>Humain</li>
+        <li>Elf de la nuit</li>
+        <li>Nain</li>
+    </ol>
+
+   
 
 
 <script src="./index.js"></script>

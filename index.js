@@ -8,12 +8,13 @@ const btnHorde = document.getElementById("btn-1");
 const btnAlliance = document.getElementById("btn-2");
 
 // ici je dévclare la variagle Anwser qui contiendra mon "H5"
-const Answer = document.querySelector("h5");
+const Answer1 = document.getElementById("Horde");
+const Answer2 = document.getElementById("Alliance");
 
 //la je vais faire un click event
 const questionHA = document.querySelector(".click-event");
 
-//Ici je déclare ma variavle pour le curseur de la sourir
+//Ici je déclare ma variable pour le curseur de la sourir
 const mousemove = document.querySelector(".mousemove");
 //ici je vais ratacher ma variable mousemove
 window.addEventListener("mousemove", (e) => {
@@ -32,19 +33,19 @@ questionHA.addEventListener("click", () => {
 // en dessous j'ai pris les 2 bouttons, et j'y ai injecté une classe que j'ai
 // Codé dans CSS qui ce nomme "show-answer".
 btnHorde.addEventListener("click", () => {
-  Answer.classList.add("show-answer");
-  Answer.style.background = "red";
+  Answer1.classList.add("show-answer");
+  Answer1.style.background = "red";
   ring();
+  alert("je ne crois pas nan");
 });
 
 btnAlliance.addEventListener("click", () => {
-  Answer.classList.add("show-answer");
-  Answer.style.background = "blue";
+  Answer2.classList.add("show-answer");
+  Answer2.style.background = "blue";
 });
 
 //la je vais faire un keypress mais le but c'est de mettre un son quand on clique
 //un bouton
-
 // const keypressCont = document.querySelector(".keypress");
 // const key = document.getElementById("key");
 
@@ -66,5 +67,33 @@ window.addEventListener("scroll", () => {
     nav.style.top = 0;
   } else {
     nav.style.top = "-50px";
+  }
+});
+
+// Ici je vais faire un Form Event
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+let pseudo = "";
+let language = "";
+
+inputName.addEventListener("input", (e) => {
+  pseudo = e.target.value;
+});
+
+select.addEventListener("input", (e) => {
+  language = e.target.value;
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (cgv.checked) {
+    document.querySelector("form > div").innerHTML = `
+<h3>pseudo : ${pseudo}</h3>
+<h4>language : ${language}</h4>
+`;
+  } else {
+    alert("Verifiez que vous etes bien sur");
   }
 });
